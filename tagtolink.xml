@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.2" type="plugin" group="content" method="upgrade">
+	<name>plg_content_tagtolink</name>
+	<author>The Adept Traveler</author>
+	<creationDate>July 2022</creationDate>
+	<copyright>Copyright (C) 2022 The Adept Traveler, Inc. All rights reserved.</copyright>
+	<license>BSD 3 Clause; see LICENSE.txt</license>
+	<authorEmail>joomla@adept.travel</authorEmail>
+	<authorUrl>adept.travel</authorUrl>
+	<version>0.0.1</version>
+	<description>PLG_CONTENT_TAGTOLINK_DESC</description>
+
+	<files>
+		<filename plugin="tagtolink">tagtolink.php</filename>
+    <filename>LICENSE.txt</filename>
+	</files>
+
+  <languages>
+		<language tag="en-GB">language/en-GB/plg_content_tagtolink.ini</language>
+		<language tag="en-GB">language/en-GB/plg_content_tagtolink.sys.ini</language>
+	</languages>
+<config>
+    <fields name="params">
+       <fieldset name="basic">
+        <field
+				name="parents"
+				type="tag"
+				label="PLG_CONTENT_TAGTOLINK_PARAMS_BASIC_PARENTS_LABEL"
+				description="PLG_CONTENT_TAGTOLINK_PARAMS_BASIC_PARENTS_LABEL"
+				mode="nested"
+				class="inputbox span12 small"
+				multiple="true" />
+
+			
+		<field
+					name="route"
+					type="list"
+					default="router"
+					label="PLG_CONTENT_TAGTOLINK_PARAMS_BASIC_ROUTE_LABEL"
+					description="PLG_CONTENT_TAGTOLINK_PARAMS_BASIC_ROUTE_DESC">
+
+          <option value="none">PLG_CONTENT_TAGTOLINK_OPTIONS_NONE</option>
+					<option value="path">PLG_CONTENT_TAGTOLINK_OPTIONS_PATH</option>
+					<option value="router">PLG_CONTENT_TAGTOLINK_OPTIONS_ROUTER</option>
+				</field>
+				</fieldset>
+    </fields>
+
+  </config>
+</extension>
+
